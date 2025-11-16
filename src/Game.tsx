@@ -310,15 +310,18 @@ function Game() {
       padding: '40px',
       fontFamily: 'var(--font-primary)'
     }}>
-      <div style={{ maxWidth: '1200px', width: '100%', position: 'relative', paddingRight: '420px' }}>
-        {/* En-tête */}
-        <div className="flex justify-center mb-8">
-          <img
-            src="/logo.jpg"
-            alt="Logo Retraite"
-            style={{ width: 220, height: 220, objectFit: 'contain', filter: 'drop-shadow(0 0 12px rgba(121,202,255,0.5))' }}
-          />
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '100px' }}>
+  <img
+    src="/logo.jpg"
+    alt="Logo Retraite"
+    style={{ 
+      width: 220, 
+      height: 220, 
+      objectFit: 'contain', 
+      filter: 'drop-shadow(0 0 12px rgba(121,202,255,0.5))' 
+    }}
+  />
+</div>
 
         {/* Zone de jeu principale */}
         <div className="flex flex-col lg:flex-row gap-10">
