@@ -44,11 +44,6 @@ const DEFAULT_QUESTIONS = [
     question: "Combien existe-t-il de Caprices de Paganini ?",
     choices: ["24", "22", "99", "Je ne crois pas avoir eu cet élève"],
     answerIndex: 0, // 24
-    media: {
-      type: 'image',
-      src: 'https://via.placeholder.com/600x400?text=Test+Image',
-      alt: 'Partition des Caprices de Paganini',
-    }
   },
 
   {
