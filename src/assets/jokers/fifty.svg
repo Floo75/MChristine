@@ -1,0 +1,9 @@
+<svg width="88" height="44" viewBox="0 0 88 44" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E2A5A"/>
+      <stop offset="100%" stop-color="#071838"/>
+    </linearGradient>
+  </defs>
+  <text x="44" y="28" text-anchor="middle" font-family="Rajdhani, Arial, sans-serif" font-size="20" fill="#ffffff" font-weight="700">50:50</text>
+</svg>

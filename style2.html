@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui Veut Gagner des Millions? - Style CSS</title>
+    <style>
+        /* --- VARIABLES ET STYLE DE BASE --- */
+        :root {
+            /* Couleurs basées sur l'interface du jeu */
+            --main-dark-blue: #1c2a50; /* Couleur dominante du fond */
+            --box-dark-bg: #000000; /* Fond noir des boîtes */
+            --border-color: #79caff; /* Bleu clair pour les bords (lueur) */
+            --text-color: #ffffff; /* Texte blanc/clair */
+            --selected-color: #ff9900; /* Orange/jaune pour la sélection */
+            
+            /* Intensité de la lueur bleue */
+            --shadow-light: 0 0 5px var(--border-color), 0 0 10px rgba(121, 202, 255, 0.5);
+        }
+
+        body {
+            /* Dégradé de fond sombre */
+            background-color: var(--main-dark-blue);
+            background-image: linear-gradient(180deg, #1c2a50 0%, #000000 100%);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            color: var(--text-color);
+        }
+
+        .quiz-container {
+            width: 90%;
+            max-width: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- BOÎTE DE LA QUESTION --- */
+        .question-box {
+            text-align: center;
+            padding: 25px 40px;
+            margin-bottom: 30px;
+            background-color: var(--box-dark-bg);
+            font-size: 1.4em;
+            font-weight: bold;
+            
+            /* Bords et lueur bleue */
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-light);
+
+            /* SIMULATION DES POINTES AVEC CLIP-PATH (Forme en fuseau horizontal) */
+            clip-path: polygon(
+                5% 0%, 95% 0%, 
+                100% 50%, 
+                95% 100%, 5% 100%, 
+                0% 50%
+            );
+            
+            position: relative; /* Nécessaire si on veut ajouter des pseudo-éléments pour les raccords */
+        }
+
+        .question-text {
+            margin: 0;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Légère lueur sur le texte */
+        }
+
+        /* --- GRILLE DES RÉPONSES (2x2) --- */
+        .answers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Espace entre les boîtes */
+            gap: 15px 30px; 
+        }
+
+        /* --- BOÎTES DE RÉPONSE --- */
+        .answer-box {
+            padding: 15px 30px;
+            text-align: left;
+            background-color: var(--box-dark-bg);
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer; 
+            box-sizing: border-box;
+
+            /* Bords et lueur bleue */
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-light);
+            
+            /* SIMULATION DES POINTES AVEC CLIP-PATH */
+            /* Forme similaire à la question */
+            clip-path: polygon(
+                3% 0%, 97% 0%, 
+                100% 50%, 
+                97% 100%, 3% 100%, 
+                0% 50%
+            );
+            
+            transition: all 0.2s ease-in-out;
+            user-select: none; /* Empêche la sélection du texte */
+        }
+
+        /* Style pour la réponse sélectionnée (orange) ou au survol */
+        .answer-box.selected, .answer-box:hover {
+            background-color: var(--selected-color);
+            color: var(--box-dark-bg); /* Texte noir sur fond sélectionné */
+            
+            /* Lueur orange/chaude plus intense */
+            box-shadow: 
+                0 0 5px var(--selected-color), 
+                0 0 15px var(--selected-color),
+                0 0 30px rgba(255, 153, 0, 0.7);
+            
+            border-color: var(--selected-color);
+        }
+
+        /* Style spécifique pour la réponse déjà sélectionnée (pour l'exemple) */
+        .answer-box.selected {
+             cursor: default;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question-box">
+            <p class="question-text">A la télévision, en quelle année le jeu 'Questions pour un champion' fut-il lancé sur FR3 ?</p>
+        </div>
+
+        <div class="answers-grid">
+            <div class="answer-box">A: 1982</div>
+            <div class="answer-box">B: 1984</div>
+            <div class="answer-box selected">C: 1986</div>
+            <div class="answer-box">D: 1988</div>
+        </div>
+    </div>
+</body>
+</html>

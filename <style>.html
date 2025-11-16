@@ -1,0 +1,130 @@
+<style>
+:root {
+    /* Variables pour gérer la couleur et l'intensité facilement */
+    --neon-blue: #00c0ff; /* Bleu éclatant */
+    --text-color: #ffc000; /* Jaune/Or pour le texte */
+    --background-color: #000000;
+    --shadow-intensity: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px rgba(0, 192, 255, 0.5);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- CONTENEUR GLOBAL --- */
+.quiz-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* --- BOÎTE DE LA QUESTION --- */
+.question-box {
+    text-align: center;
+    padding: 30px 60px;
+    margin-bottom: 50px; /* Espace avec les réponses */
+    
+    /* Forme : Grande boîte avec coins très arrondis */
+    border: 2px solid var(--neon-blue);
+    border-radius: 60px; 
+    
+    /* Effet Néon */
+    box-shadow: var(--shadow-intensity);
+    
+    /* Pour simuler les raccordements horizontaux (lignes sur les côtés) */
+    position: relative;
+}
+
+/* Le texte de la question */
+.question-text {
+    color: var(--text-color);
+    font-size: 1.8em;
+    font-weight: bold;
+    /* Effet Néon sur le texte */
+    text-shadow: 0 0 5px var(--neon-blue);
+    margin: 0;
+}
+
+/* --- GRILLE DES RÉPONSES (2x2) --- */
+.answers-grid {
+    display: grid;
+    /* 2 colonnes égales */
+    grid-template-columns: 1fr 1fr;
+    /* Espacement entre les lignes et les colonnes */
+    gap: 30px; 
+}
+
+/* --- BOÎTES DE RÉPONSE --- */
+.answer-box {
+    padding: 15px 30px;
+    text-align: left;
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer; /* Indique que c'est cliquable */
+
+    /* Forme : Boîte avec coins arrondis */
+    border: 2px solid var(--neon-blue);
+    border-radius: 40px; 
+    
+    /* Effet Néon */
+    box-shadow: var(--shadow-intensity);
+    text-shadow: 0 0 3px var(--neon-blue);
+    
+    /* Transition pour l'effet de survol */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Effet au survol (hover) */
+.answer-box:hover {
+    background-color: rgba(0, 192, 255, 0.1); /* Léger fond bleu transparent */
+    box-shadow: 
+        0 0 15px var(--neon-blue), /* Intensifie l'ombre */
+        0 0 30px var(--neon-blue),
+        0 0 60px rgba(0, 192, 255, 0.7);
+}
+
+/* --- SIMULATION DES RACCORDEMENTS --- */
+/* Pour simuler les lignes de raccordement (les barres horizontales et les jonctions) */
+/* C'est la partie la plus difficile sans utiliser d'image de fond ! */
+/* On peut utiliser des pseudo-éléments pour un look minimaliste */
+
+/* Raccordements horizontaux sur la Question */
+.question-box::before, .question-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Petite ligne horizontale */
+    height: 2px;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+}
+
+.question-box::before {
+    left: -20px; /* Ligne à gauche */
+}
+
+.question-box::after {
+    right: -20px; /* Ligne à droite */
+}
+</style>
+
+<div class="quiz-container">
+    <div class="question-box">
+        <p class="question-text">Question Plochedader</p>
+    </div>
+
+    <div class="answers-grid">
+        <div class="answer-box">A: Answer 1 Text</div>
+        <div class="answer-box">B: Answer 2 Text</div>
+        <div class="answer-box">C: Answer 3 Text</div>
+        <div class="answer-box">D: Answer 4 Text</div>
+    </div>
+</div>

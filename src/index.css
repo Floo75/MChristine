@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* Minimal base reset compatible with Tailwind */
+html, body, #root { height: 100%; }
+body { margin: 0; background-color: #000; color: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
