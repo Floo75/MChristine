@@ -301,16 +301,13 @@ function Game() {
   }
 
   return (
-    <div style={{
-      backgroundColor: '#1c2a50',
-      backgroundImage: 'linear-gradient(180deg, #1c2a50 0%, #000000 100%)',
-      minHeight: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      padding: '40px',
-      fontFamily: 'var(--font-primary)'
-    }}>
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '100px' }}>
+   {/* Logo centré */}
+<div style={{
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  marginBottom: '100px'
+}}>
   <img
     src="/logo.jpg"
     alt="Logo Retraite"
@@ -322,6 +319,7 @@ function Game() {
     }}
   />
 </div>
+
 
         {/* Zone de jeu principale */}
         <div className="flex flex-col lg:flex-row gap-10">
