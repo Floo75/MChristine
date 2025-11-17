@@ -1,3 +1,5 @@
+console.log("Game.tsx version 1.1");
+
 import React, { useEffect, useState, useRef } from "react";
 import fiftyIcon from './assets/jokers/fifty.svg';
 import phoneIcon from './assets/jokers/phone.svg';
