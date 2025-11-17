@@ -58,7 +58,7 @@ const DEFAULT_QUESTIONS: Question[] = [
   {
     id: 4,
     question: "Quel est ce chant ?",
-    choices: ["Dies Irae (Verdi)", "Gloria (Vivaldi)", "Salve Regina (Liszt)", "La Marseillaise"],
+    choices: ["Ave verum Corpus (Elgar)", "Gloria (Vivaldi)", "Salve Regina (Liszt)", "La Marseillaise"],
     answerIndex: 0,
   },
   {
