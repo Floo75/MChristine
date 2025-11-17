@@ -313,8 +313,8 @@ function Game() {
     style={{ 
       width: 220, 
       height: 220,
-     margin-bottom: 50px;
-  margin-left: 50%;
+     margin-bottom: 50px,
+  margin-left: 50%,
       objectFit: 'contain', 
       filter: 'drop-shadow(0 0 12px rgba(121,202,255,0.5))' 
     }}
