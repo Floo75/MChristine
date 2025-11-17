@@ -314,7 +314,7 @@ function Game(): JSX.Element {
         {/* LEFT */}
         <div style={leftColumn}>
           {/* Logo centré avec margin-bottom 100px */}
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: 100 }}>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: 50 }}>
             <img
               src="/logo.jpg"
               alt="Logo Retraite"
