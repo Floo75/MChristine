@@ -70,12 +70,12 @@ const DEFAULT_QUESTIONS: Question[] = [
   {
     id: 6,
     question: "CONSERVATOIRE : Qui a été le premier directeur de la forme actuelle de l'École de Musique de Persan ?",
-    choices: ["Arnaud Bazin", "Fernand Chatelain", "Marc Devisme", "Il n'y a eu que Patrick Laviron"],
-    answerIndex: 2,
+    choices: ["René Vermeire", "Fernand Chatelain", "Marc Devisme", "Il n'y a eu que Patrick Laviron"],
+    answerIndex: 0,
   },
   {
     id: 7,
-    question: "CHŒUR : Vous avez pris la direction de la Chorale Mixte d’Adultes dès sa création. Mais en quelle date ?",
+    question: "CHŒUR :  Quand avez-vous pris la direction de la Chorale Mixte d’Adultes ?",
     choices: ["1978", "1985", "1988", "1789"],
     answerIndex: 1,
   },
@@ -106,7 +106,7 @@ const DEFAULT_QUESTIONS: Question[] = [
   {
     id: 12,
     question: "Quel est ce chant ?",
-    choices: ["Ce n'est qu'un au revoir", "Ce n'est qu'un au revoir", "Ce n'est qu'un au revoir", "Ce n'est qu'un au revoir"],
+    choices: ["Alleluia (Alexander Arkhangelsky)", "Alleluia (Alexander Arkhangelsky)", "Alleluia (Alexander Arkhangelsky)", "Alleluia (Alexander Arkhangelsky)"],
     answerIndex: 0,
   },
 ];
